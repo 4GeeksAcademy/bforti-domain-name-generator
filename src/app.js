@@ -1,11 +1,19 @@
 /* eslint-disable */
-import "bootstrap";
-import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+let pronoun = ["the", "our"];
+let adj = ["great", "big"];
+let noun = ["jogger", "racoon"];
 
 window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+  let domi = document.getElementById("dominio");
+
+  for (let a of pronoun) {
+    for (let b of adj) {
+      for (let c of noun) {
+        domi.innerHTML += `<li>${a + b + c + ".com"}</li> <br/>`;
+      }
+    }
+  }
+
+  return domi;
 };
